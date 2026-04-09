@@ -25,7 +25,7 @@ export default function RootLayout({
     >
       <body className={`${dmSans.className} min-h-full flex flex-col bg-white text-[#1E1E1E]`}>
         <Navbar />
-        <div className="mx-auto w-full max-w-360 px-6 lg:px-25">
+        <div className="mx-auto w-full px-6 lg:px-25">
           {children}
         </div>
       </body>
