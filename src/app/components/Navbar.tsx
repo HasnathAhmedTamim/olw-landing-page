@@ -19,8 +19,8 @@ export default function Navbar() {
 
     return (
         <nav className="w-full border-b border-black/5 bg-white">
-            <div className="mx-auto flex h-22 w-full items-center justify-between px-6 lg:h-22.25 lg:max-w-360 lg:items-start lg:justify-start lg:px-0">
-                <Link href="/" aria-label="Go to home" className="lg:ml-25 lg:mt-6">
+            <div className="mx-auto flex h-22.25 w-full max-w-360 items-center justify-between px-6 lg:px-25">
+                <Link href="/" aria-label="Go to home" className="shrink-0">
                     <Image
                         src="/logos/Google-Logo.png"
                         alt="Google Logo"
@@ -31,7 +31,7 @@ export default function Navbar() {
                     />
                 </Link>
 
-                <ul className="hidden items-center gap-6 lg:ml-52 lg:mt-6 lg:h-10.25 lg:flex">
+                <ul className="hidden items-center gap-6.25 lg:flex">
                     {navItems.map((item) => (
                         <li key={item.label}>
                             <Link
@@ -48,7 +48,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <div className="lg:ml-56.25 lg:mr-25 lg:mt-4.75">
+                <div className="shrink-0">
                     <button
                         type="button"
                         className="inline-flex h-12.5 w-50.25 items-center justify-center gap-2.5 rounded-[5px] bg-[#ED3C6A] px-6 py-4.5"
