@@ -21,10 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${dmSans.className} flex min-h-screen flex-col bg-white text-[#1E1E1E]`}>
+      <body className={`${dmSans.className} min-h-full flex flex-col`}>
         <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <div className="flex justify-center items-center">
+          <main className="">{children}</main>
+        </div>
+    
+        {/* <Footer /> */}
       </body>
     </html>
   );
