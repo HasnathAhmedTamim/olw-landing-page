@@ -1,7 +1,28 @@
+import FAQ from "./components/faq/FAQ";
+import Hero from "./components/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
+import Onboarding from "./components/onboarding/Onboarding";
+import Pricing from "./components/pricing/Pricing";
+import Reviews from "./components/reviews/Reviews";
+import Services from "./components/services/Services";
+import Tools from "./components/tools/Tools";
+
 export default function LandingPage() {
   return (
-    <main className="min-h-1872.5 w-full overflow-x-hidden bg-white py-16 lg:py-20">
-      {/* component content */}
-    </main>
+    <section className="">
+      <div className="">
+
+
+
+        {/* <Hero />
+        <Services />
+        <Pricing />
+        <Tools />
+        <Onboarding />
+        <Reviews />
+        <FAQ /> */}
+
+      </div>
+    </section>
   );
 }
