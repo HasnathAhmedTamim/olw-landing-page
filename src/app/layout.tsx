@@ -23,9 +23,13 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
     >
-      <body className={`${dmSans.className} min-h-full flex flex-col bg-white text-[#1E1E1E]`}>
-        <Navbar />
-        <div className="mx-auto w-full px-6 lg:px-25">
+      <body className={`${dmSans.className}  bg-white text-[#1E1E1E]`}>
+
+        <div className="max-w-full mx-auto">
+          <Navbar />
+        </div>
+
+        <div className="">
           {children}
         </div>
       </body>
