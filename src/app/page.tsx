@@ -12,12 +12,12 @@ export default function LandingPage() {
     <section className="">
       <div className="">
 
-
+          <Tools />
 
         {/* <Hero />
         <Services />
         <Pricing />
-        <Tools />
+     
         <Onboarding />
         <Reviews />
         <FAQ /> */}
