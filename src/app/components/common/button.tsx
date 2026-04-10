@@ -18,8 +18,8 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-    verticalPadding = "py-2",
-    horizontalPadding = "px-4",
+    verticalPadding = "",
+    horizontalPadding = "",
     child = null,
     children,
     variant,
@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
     const variants: Record<Variant, string> = {
         base: "bg-(--color-accent) text-white border border-transparent rounded-[5px] transition-colors duration-150 ease-in-out hover:bg-(--color-accent-hover)",
-        more: "bg-blue-600 text-white hover:bg-blue-700 rounded-md",
+        more: "opacity-100 w-fit px-6 py-1.75 rounded-[50px] border border-(--color-accent) bg-transparent text-(--color-accent) transition-colors duration-150 ease-in-out hover:bg-(--color-accent-hover)/10",
         start: "bg-green-600 text-white hover:bg-green-700 rounded-md",
     };
 
@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
     const classes = [
         verticalPadding,
         horizontalPadding,
-        "inline-flex items-center justify-center font-bold focus:outline-none disabled:cursor-not-allowed disabled:opacity-60",
+        "inline-flex items-center justify-center font-medium focus:outline-none disabled:cursor-not-allowed disabled:opacity-60",
         variants[selectedVariant],
         className,
     ].join(" ");
