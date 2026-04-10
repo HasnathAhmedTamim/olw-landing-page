@@ -1,0 +1,13 @@
+/* Shared color variables used across the app */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* new shared tokens */
+  --color-nav-text: #1e1e1e;
+  --color-accent: #ed3c6a;
+  --color-accent-hover: #d8365f;
+
+  /* partners background token */
+  --color-partners-bg: #f6f6f6;
+}

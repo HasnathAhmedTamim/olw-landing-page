@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import Button from "../common/button";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -15,13 +16,15 @@ const NAV_ITEMS = [
   { label: "Resources", href: "/resources" },
 ];
 
-const TOP_ROW_PADDING = "px-[clamp(16px,7vw,100px)] py-3 lg:h-[89px] lg:py-0";
+const TOP_ROW_PADDING = "px-4 py-5 md:px-8 lg:px-16 xl:px-25";
 
 function getDesktopLinkClass(isActive: boolean) {
   const base =
-    "pb-1 text-sm leading-normal transition-all duration-200 lg:text-base";
-  const active = "border-b-2 border-[#ED3C6A] font-bold text-[#ED3C6A]";
-  const inactive = "text-[#1E1E1E] hover:text-[#ED3C6A]";
+    "text-base font-normal no-underline underline-offset-8 decoration-2 transition-all duration-150 ease-in-out";
+  const active =
+    "font-bold text-(--color-accent) underline decoration-(--color-accent)";
+  const inactive =
+    "text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
 
   return `${base} ${isActive ? active : inactive}`;
 }
@@ -50,13 +53,12 @@ export default function Navbar() {
               alt="GIC Logo"
               width={125}
               height={45}
-              className="h-8 w-auto object-contain sm:h-9 lg:h-auto"
               priority
             />
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden items-center gap-4 md:flex lg:gap-6">
+          <ul className="hidden items-center gap-6 md:flex">
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
 
@@ -81,15 +83,23 @@ export default function Navbar() {
             <Link
               href="/contact"
               aria-label="Schedule a meeting"
-              className="hidden md:inline-flex items-center gap-2 rounded-[5px] bg-[#ED3C6A] px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90"
+              className="hidden md:inline-flex"
             >
-              <span>Schedule A Meeting</span>
-              <Image
-                src="/logos/Arrow.png"
-                alt="Arrow icon"
-                width={10}
-                height={10}
-              />
+              <Button
+                type="base"
+                element="span"
+                verticalPadding="py-[13.5px]"
+                horizontalPadding="px-[22px]"
+                className="gap-2 text-sm font-bold transition-opacity hover:opacity-90"
+              >
+                <span>Schedule A Meeting</span>
+                <Image
+                  src="/logos/Arrow.png"
+                  alt="Arrow icon"
+                  width={10}
+                  height={9}
+                />
+              </Button>
             </Link>
 
             {/* Hamburger */}
@@ -97,7 +107,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-[#1E1E1E] transition-colors hover:bg-black/5 md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 md:hidden"
                 aria-label="Close menu"
                 aria-expanded="true"
                 aria-controls="mobile-navigation"
@@ -108,7 +118,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-[#1E1E1E] transition-colors hover:bg-black/5 md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 md:hidden"
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="mobile-navigation"
@@ -123,7 +133,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {open && (
           <div id="mobile-navigation" className="md:hidden border-t border-black/10">
-            <ul className="flex flex-col gap-4 px-[clamp(16px,7vw,100px)] py-4">
+            <ul className="flex flex-col gap-4 px-4 py-4">
               {NAV_ITEMS.map((item) => {
                 const active = isActive(item.href);
 
@@ -133,8 +143,8 @@ export default function Navbar() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={`block text-sm ${active
-                          ? "text-[#ED3C6A] font-bold"
-                          : "text-[#1E1E1E]"
+                          ? "text-(--color-accent) font-bold"
+                          : "text-(--color-nav-text)"
                         }`}
                     >
                       {item.label}
@@ -148,15 +158,22 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex w-fit items-center gap-2 rounded-[5px] bg-[#ED3C6A] px-4 py-2 text-sm font-bold text-white"
                 >
-                  Schedule A Meeting
-                  <Image
-                    src="/logos/Arrow.png"
-                    alt="Arrow icon"
-                    width={10}
-                    height={10}
-                  />
+                  <Button
+                    type="base"
+                    element="span"
+                    verticalPadding="py-[13.5px]"
+                    horizontalPadding="px-[22px]"
+                    className="mt-2 w-fit gap-2 text-sm font-bold"
+                  >
+                    Schedule A Meeting
+                    <Image
+                      src="/logos/Arrow.png"
+                      alt="Arrow icon"
+                      width={10}
+                      height={9}
+                    />
+                  </Button>
                 </Link>
               </li>
             </ul>
