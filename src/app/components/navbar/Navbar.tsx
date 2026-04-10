@@ -20,11 +20,11 @@ const TOP_ROW_PADDING = "px-4 py-5 md:px-8 lg:px-16 xl:px-25";
 
 function getDesktopLinkClass(isActive: boolean) {
   const base =
-    "text-base no-underline underline-offset-8 decoration-2 transition-all duration-150 ease-in-out";
+    "text-lg no-underline underline-offset-8 transition-all duration-150 ease-in-out";
   const active =
-    "text-normal no-underline hover:text-(--color-accent) underline-offset-8 decoration-2 transition-all duration-150 ease-in-out font-normal text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
+    "font-bold text-(--color-accent) visited:text-(--color-accent) underline decoration-(--color-accent)";
   const inactive =
-    "font-normal text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
+    "font-normal text-(--color-nav-text) visited:text-(--color-nav-text) hover:text-(--color-accent) hover:font-bold hover:underline hover:decoration-(--color-accent)";
 
   return `${base} ${isActive ? active : inactive}`;
 }
@@ -35,6 +35,8 @@ export default function Navbar() {
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const hasActiveNavItem = NAV_ITEMS.some((item) => isActive(item.href));
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-black/10 bg-white">
@@ -60,7 +62,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <ul className="hidden items-center gap-6 md:flex">
             {NAV_ITEMS.map((item) => {
-              const active = isActive(item.href);
+              const active = hasActiveNavItem && isActive(item.href);
 
               return (
                 <li key={item.label}>
@@ -143,8 +145,8 @@ export default function Navbar() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={`block text-sm ${active
-                          ? "text-(--color-accent) font-bold"
-                          : "text-(--color-nav-text)"
+                        ? "text-(--color-accent) visited:text-(--color-accent) font-bold"
+                        : "text-(--color-nav-text) visited:text-(--color-nav-text)"
                         }`}
                     >
                       {item.label}
