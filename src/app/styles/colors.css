@@ -1,7 +1,14 @@
 /* Shared color variables used across the app */
 :root {
-  --color-background: #ffffff;
+  --color-background: #fbfbfb;
+  --color-white-background: #ffffff;
   --color-foreground: #171717;
+
+  /* service item border */
+  --color-service-border: #fac4d2;
+
+  /* service item shadow (used on hover) */
+  --color-service-shadow: #d7cdcf78;
 
   /* new shared tokens */
   --color-nav-text: #1e1e1e;
@@ -10,4 +17,7 @@
 
   /* partners background token */
   --color-partners-bg: #f6f6f6;
+
+  /* heading black used for "Our" */
+  --color-heading-black: #000000;
 }
