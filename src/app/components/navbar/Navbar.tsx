@@ -20,11 +20,11 @@ const TOP_ROW_PADDING = "px-4 py-5 md:px-8 lg:px-16 xl:px-25";
 
 function getDesktopLinkClass(isActive: boolean) {
   const base =
-    "text-base font-normal no-underline underline-offset-8 decoration-2 transition-all duration-150 ease-in-out";
+    "text-base no-underline underline-offset-8 decoration-2 transition-all duration-150 ease-in-out";
   const active =
-    "font-bold text-(--color-accent) underline decoration-(--color-accent)";
+    "text-normal no-underline hover:text-(--color-accent) underline-offset-8 decoration-2 transition-all duration-150 ease-in-out font-normal text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
   const inactive =
-    "text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
+    "font-normal text-(--color-nav-text) hover:font-bold hover:text-(--color-accent) hover:underline hover:decoration-(--color-accent)";
 
   return `${base} ${isActive ? active : inactive}`;
 }
