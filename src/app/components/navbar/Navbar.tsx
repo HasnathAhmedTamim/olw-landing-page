@@ -49,8 +49,8 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             <Image
-              src="/logos/gic.png"
-              alt="GIC Logo"
+              src="/logos/google_logo.svg"
+              alt="Google Logo"
               width={125}
               height={45}
               priority
