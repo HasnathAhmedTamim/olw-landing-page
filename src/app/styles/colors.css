@@ -14,6 +14,15 @@
   --color-nav-text: #1e1e1e;
   --color-accent: #ed3c6a;
   --color-accent-hover: #d8365f;
+  --color-on-accent: #ffffff;
+
+  /* pricing section tokens */
+  --color-pay-text: #1e1e1e;
+  --color-switch-bg: #04092152;
+  --color-subtext: #6b7280;
+  --color-description-text: #6b7280;
+  --color-description-on-accent: #ffe6ed;
+  --color-feature-disabled: #9ca3af;
 
   /* partners background token */
   --color-partners-bg: #f6f6f6;

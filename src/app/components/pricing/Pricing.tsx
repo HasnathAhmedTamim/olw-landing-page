@@ -1,171 +1,228 @@
-// "use client";
+"use client";
 
-// import { useState } from "react";
-// import Image from "next/image";
+import { useState } from "react";
+import Image from "next/image";
+import Button from "../common/button";
+type PricingPlan = {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  features: {
+    name: string;
+    included: boolean;
+  }[];
+};
 
-// // Define the feature set to ensure consistency across all cards
-// const ALL_FEATURES = [
-//   "20,000+ of PNG & SVG graphics",
-//   "Access to 100 million stock images",
-//   "Upload custom icons and fonts",
-//   "Unlimited Sharing",
-//   "Upload graphics & video in up to 4k",
-//   "Unlimited Projects",
-//   "Instant Access to our design system",
-//   "Create teams to collaborate on designs"
-// ];
+const PRICING: PricingPlan[] = [
+  {
+    id: "freebie",
+    title: "Freebie",
+    description:
+      "Ideal for individuals who need quick access to basic features.",
+    price: 0,
+    features: [
+      { name: "20,000+ of PNG & SVG graphics", included: true },
+      { name: "Access to 100 million stock images", included: true },
+      { name: "Upload custom icons and fonts", included: false },
+      { name: "Unlimited Sharing", included: false },
+      { name: "Upload graphics & video in up to 4k", included: false },
+      { name: "Unlimited Projects", included: false },
+      { name: "Instant Access to our design system", included: false },
+      { name: "Create teams to collaborate on designs", included: false },
+    ],
+  },
+  {
+    id: "professional",
+    title: "Professional",
+    description:
+      "Ideal for individuals who need advanced features and tools for client work.",
+    price: 25,
+    features: [
+      { name: "20,000+ of PNG & SVG graphics", included: true },
+      { name: "Access to 100 million stock images", included: true },
+      { name: "Upload custom icons and fonts", included: true },
+      { name: "Unlimited Sharing", included: true },
+      { name: "Upload graphics & video in up to 4k", included: true },
+      { name: "Unlimited Projects", included: true },
+      { name: "Instant Access to our design system", included: false },
+      { name: "Create teams to collaborate on designs", included: false },
+    ],
+  },
+  {
+    id: "enterprise",
+    title: "Enterprise",
+    description:
+      "Ideal for businesses who need personalized services and security for large teams.",
+    price: 100,
+    features: [
+      { name: "20,000+ of PNG & SVG graphics", included: true },
+      { name: "Access to 100 million stock images", included: true },
+      { name: "Upload custom icons and fonts", included: true },
+      { name: "Unlimited Sharing", included: true },
+      { name: "Upload graphics & video in up to 4k", included: true },
+      { name: "Unlimited Projects", included: true },
+      { name: "Instant Access to our design system", included: true },
+      { name: "Create teams to collaborate on designs", included: true },
+    ],
+  },
+];
 
-// const PRICING_PLANS = [
-//   {
-//     name: "Freebie",
-//     description: "Ideal for individuals who need quick access to basic features.",
-//     monthlyPrice: "$0",
-//     yearlyPrice: "$0",
-//     highlighted: false,
-//     featuresIncluded: 2, // First 2 features are checked
-//   },
-//   {
-//     name: "Professional",
-//     description: "Ideal for individuals who need advanced features and tools for client work.",
-//     monthlyPrice: "$25",
-//     yearlyPrice: "$20", // Assuming a discount for yearly
-//     highlighted: true,
-//     featuresIncluded: 6, // First 6 features are checked
-//   },
-//   {
-//     name: "Enterprise",
-//     description: "Ideal for businesses who need personalized services and security for large teams.",
-//     monthlyPrice: "$100",
-//     yearlyPrice: "$80",
-//     highlighted: false,
-//     featuresIncluded: 8, // All features are checked
-//   }
-// ];
+const Pricing = () => {
+  const [isYearly, setIsYearly] = useState(false);
 
-// export default function Pricing() {
-//   const [isYearly, setIsYearly] = useState(false);
+  return (
+    <section className="mt-18">
+      <div className="flex flex-col items-center justify-center">
+        <h2
+          className="font-['DM_Sans',sans-serif] text-[40px] leading-[100%] tracking-[0%] text-center font-bold"
+        >
+          <span className="text-(--color-nav-text)">
+            Airbnb Assistant
+          </span>{" "}
+          <span className="text-(--color-accent)">Pricing</span>
+        </h2>
+        <p
+          className="mt-4 text-center text-[20px] leading-[100%] tracking-[0%] font-normal font-['DM_Sans',sans-serif] text-(--color-nav-text)"
+        >
+          Choose a plan that&apos;s right for you
+        </p>
 
-//   return (
-//     <section className="w-full py-20 bg-[var(--color-background)]">
-//       <div className="container-custom mx-auto max-w-[1440px] px-6 lg:px-[100px]">
+        <div className="mt-8 flex items-center gap-6 relative">
+          <p
+            className="text-[16px] leading-[100%] tracking-[0%] font-normal text-(--color-pay-text) font-['DM_Sans',sans-serif]"
+          >
+            Pay Monthly
+          </p>
+          <label className="inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              className="sr-only peer"
+              checked={isYearly}
+              aria-label="Toggle yearly billing"
+              onChange={() => setIsYearly((s) => !s)}
+            />
+            <div
+              className={`w-12 h-6 rounded-full border border-black/10 relative transition-colors duration-300 ${
+                isYearly ? "bg-(--color-accent)" : "bg-(--color-switch-bg)"
+              }`}
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform duration-300 ${
+                  isYearly ? "translate-x-6" : "translate-x-0"
+                }`}
+              />
+            </div>
+          </label>
+          <p
+            className="text-[16px] leading-[100%] tracking-[0%] font-normal text-(--color-pay-text) font-['DM_Sans',sans-serif]"
+          >
+            Pay Yearly
+          </p>
 
-//         {/* Header Section */}
-//         <div className="text-center mb-12 flex flex-col items-center">
-//           <h2 className="text-[40px] font-bold text-[#1e1e1e] mb-4">
-//             Airbnb Assistant <span className="text-[var(--color-accent)]">pricing</span>
-//           </h2>
-//           {/* Applying your exact font specifications */}
-//           <p className="font-sans font-normal text-[20px] leading-none text-[#191D23]">
-//             Choose a plan that’s right for you
-//           </p>
-//         </div>
+          <div className="absolute -right-45 -top-2.5 flex items-end">
+            <Image
+              src="/logos/arrow2.svg"
+              width={92}
+              height={56}
+              alt="Save arrow"
+              className="mb-1.5"
+            />
+            <span className="text-[16px] mb-5 font-medium underline text-(--color-accent)">
+              Save 25%
+            </span>
+          </div>
+        </div>
 
-//         {/* Toggle Section */}
-//         <div className="flex items-center justify-center gap-4 mb-16">
-//           <span className={`text-[16px] transition-colors ${!isYearly ? "text-[#1e1e1e]" : "text-gray-500"}`}>
-//             Pay Monthly
-//           </span>
+        <ul className="mt-11.5 w-full px-32 grid grid-cols-3 gap-6">
+          {PRICING.map((plan) => {
+            const annualPrice = Math.round(plan.price * 12 * 0.75);
+            return (
+              <li
+                key={plan.id}
+                className={
+                  "group flex flex-col rounded-[10px] py-10 px-6 border opacity-100 bg-(--color-white-background) border-(--color-service-border) hover:bg-(--color-accent) transition-colors duration-200"
+                }
+              >
+                <p
+                  className={
+                    "font-bold text-[22px] leading-[100%] tracking-[0%] text-(--color-pay-text) group-hover:text-(--color-on-accent)"
+                  }
+                >
+                  {plan.title}
+                </p>
+                <p
+                  className={
+                    "font-normal not-italic text-[16px] leading-[100%] tracking-[0%] text-(--color-description-text) group-hover:text-(--color-description-on-accent) mt-3"
+                  }
+                >
+                  {plan.description}
+                </p>
+                <p className="mt-5 mb-6 flex items-center gap-3">
+                  {isYearly ? (
+                    <>
+                      <span className="font-['Manrope',sans-serif] font-semibold text-[56px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent)">
+                        {"$" + annualPrice}
+                      </span>
+                      <span className="font-['Manrope',sans-serif] font-light text-[16px] leading-[100%] text-(--color-subtext) group-hover:text-(--color-description-on-accent)">
+                        /Year
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="font-['Manrope',sans-serif] font-semibold text-[56px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent)">
+                        {"$" + plan.price}
+                      </span>
+                      <span className="font-['Manrope',sans-serif] font-light text-[16px] leading-[100%] text-(--color-subtext) group-hover:text-(--color-description-on-accent)">
+                        /Month
+                      </span>
+                    </>
+                  )}
+                </p>
+                <Button
+                  type="start"
+                  verticalPadding="py-0"
+                  horizontalPadding="px-0 group-hover:bg-(--color-white-background) group-hover:border-transparent"
+                >
+                  <span className="text-[16px]">Get Started Now</span>
+                </Button>
+                <ul className="mt-10 space-y-3">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature.name}
+                      className="flex items-center gap-4 text-[16px] leading-[100%]"
+                    >
+                      <div
+                        className={`w-8 h-8 min-h-8 min-w-8 rounded-full flex items-center justify-center ${
+                          feature.included ? "bg-[#FAC4D2]" : "bg-[#F7F8F9]"
+                        }`}
+                      >
+                        <Image
+                          src={
+                            feature.included
+                              ? "/logos/RightIcons.png"
+                              : "/logos/CrossIcons.png"
+                          }
+                          width={16}
+                          height={16}
+                          alt={feature.included ? "Included" : "Not included"}
+                        />
+                      </div>
+                      <span
+                        className={`${feature.included ? "text-(--color-pay-text) group-hover:text-(--color-on-accent)" : "text-(--color-feature-disabled)"} font-['Manrope',sans-serif] font-medium text-[16px] leading-[100%] tracking-[0%]`}
+                      >
+                        {feature.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  );
+};
 
-//           {/* Custom Toggle Switch */}
-//           <button
-//             type="button"
-//             onClick={() => setIsYearly(!isYearly)}
-//             className="relative inline-flex h-7 w-14 items-center rounded-full bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2"
-//             aria-pressed={isYearly}
-//           >
-//             <span className="sr-only">Toggle yearly billing</span>
-//             <span
-//               className={`inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${isYearly ? "translate-x-8" : "translate-x-1"
-//                 }`}
-//             />
-//           </button>
-
-//           <div className="relative flex items-center">
-//             <span className={`text-[16px] transition-colors ${isYearly ? "text-[#1e1e1e]" : "text-gray-500"}`}>
-//               Pay Yearly
-//             </span>
-
-//             {/* Arrow & Save Tag overlay */}
-//             <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 flex items-center min-w-max pointer-events-none">
-//               <Image
-//                 src="/Arrow 2.png"
-//                 alt="Arrow"
-//                 width={45}
-//                 height={30}
-//                 className="object-contain"
-//               />
-//               <span className="text-[var(--color-accent)] font-normal text-[14px] ml-1">
-//                 Save 25%
-//               </span>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Pricing Cards Grid */}
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-//           {PRICING_PLANS.map((plan, index) => (
-//             <div
-//               key={index}
-//               className={`rounded-[10px] p-8 lg:p-10 transition-all duration-300 ${plan.highlighted
-//                   ? "bg-[var(--color-accent)] text-white shadow-xl scale-105"
-//                   : "bg-white text-[var(--color-nav-text)] border border-[var(--color-service-border)] hover:shadow-[0_4px_20px_var(--color-service-shadow)]"
-//                 }`}
-//             >
-//               <h3 className="text-[24px] font-bold mb-4">{plan.name}</h3>
-//               <p className={`text-[14px] leading-[150%] mb-8 min-h-[60px] ${plan.highlighted ? "text-white/90" : "text-gray-500"}`}>
-//                 {plan.description}
-//               </p>
-
-//               <div className="flex items-end mb-8">
-//                 <span className="text-[50px] font-bold leading-none tracking-tight">
-//                   {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
-//                 </span>
-//                 <span className={`text-[16px] ml-2 mb-2 ${plan.highlighted ? "text-white/80" : "text-gray-500"}`}>
-//                   / Month
-//                 </span>
-//               </div>
-
-//               <button
-//                 className={`w-full py-4 rounded-[5px] text-[16px] font-bold transition-colors mb-10 ${plan.highlighted
-//                     ? "bg-white text-[var(--color-accent)] hover:bg-gray-100"
-//                     : "bg-transparent border border-[var(--color-service-border)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white"
-//                   }`}
-//               >
-//                 Get Started Now
-//               </button>
-
-//               {/* Features List */}
-//               <ul className="flex flex-col gap-5">
-//                 {ALL_FEATURES.map((feature, featureIndex) => {
-//                   const isIncluded = featureIndex < plan.featuresIncluded;
-//                   return (
-//                     <li key={featureIndex} className="flex items-center gap-4">
-//                       {isIncluded ? (
-//                         // Checkmark SVG
-//                         <svg className="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                           <circle cx="12" cy="12" r="12" fill={plan.highlighted ? "rgba(255,255,255,0.2)" : "#FAC4D2"} fillOpacity={plan.highlighted ? "1" : "0.5"} />
-//                           <path d="M7 12L10.5 15.5L17 8" stroke={plan.highlighted ? "white" : "#ED3C6A"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                         </svg>
-//                       ) : (
-//                         // Cross SVG
-//                         <svg className="shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                           <circle cx="12" cy="12" r="12" fill={plan.highlighted ? "rgba(255,255,255,0.1)" : "#F3F4F6"} />
-//                           <path d="M15 9L9 15M9 9L15 15" stroke={plan.highlighted ? "white" : "#9CA3AF"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                         </svg>
-//                       )}
-//                       <span className={`text-[14px] leading-[150%] ${plan.highlighted ? "text-white" : isIncluded ? "text-[#1e1e1e]" : "text-gray-400"
-//                         }`}>
-//                         {feature}
-//                       </span>
-//                     </li>
-//                   );
-//                 })}
-//               </ul>
-//             </div>
-//           ))}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
+export default Pricing;

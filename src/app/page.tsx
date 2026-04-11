@@ -2,6 +2,7 @@ import FAQ from "./components/faq/FAQ";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Onboarding from "./components/onboarding/Onboarding";
+import Pricing from "./components/pricing/Pricing";
 
 import Reviews from "./components/reviews/Reviews";
 import Services from "./components/services/Services";
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <div className="">
 
         <Services />
+        <Pricing />
         <Tools />
 
         {/* <Hero />

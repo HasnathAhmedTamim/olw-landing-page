@@ -96,7 +96,7 @@ export default function Navbar() {
               >
                 <span>Schedule A Meeting</span>
                 <Image
-                  src="/logos/Arrow.png"
+                  src="/logos/Arrow.svg"
                   alt="Arrow icon"
                   width={10}
                   height={9}
