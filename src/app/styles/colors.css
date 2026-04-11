@@ -14,19 +14,26 @@
   --color-nav-text: #1e1e1e;
   --color-accent: #ed3c6a;
   --color-accent-hover: #d8365f;
-  --color-on-accent: #ffffff;
-
-  /* pricing section tokens */
-  --color-pay-text: #1e1e1e;
-  --color-switch-bg: #04092152;
-  --color-subtext: #6b7280;
-  --color-description-text: #6b7280;
-  --color-description-on-accent: #ffe6ed;
-  --color-feature-disabled: #9ca3af;
+  /* pay label text color */
+  --color-pay-text: #191d23;
+  /* description text color */
+  --color-description-text: #64748b;
+  /* subtext (month/year) color */
+  --color-subtext: #4b5768;
 
   /* partners background token */
   --color-partners-bg: #f6f6f6;
 
   /* heading black used for "Our" */
   --color-heading-black: #000000;
+
+  /* switch background (uses same base color as nav text with alpha) */
+  --color-switch-bg: rgba(30, 30, 30, 0.32);
+  /* feature text colors */
+  --color-feature-disabled: #a0abbb;
+  /* colors used when a card is on accent (hover) */
+  --color-on-accent: #ffffff;
+  --color-description-on-accent: #f7f8f9;
+  /* tools tile shadow (used on hover) */
+  --color-tools-shadow: #ff8aa847;
 }
