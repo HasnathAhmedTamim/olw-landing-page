@@ -34,7 +34,7 @@ const REVIEWS: Review[] = [
 
 export default function Reviews() {
   return (
-    <section className="bg-(--color-background) pt-16 lg:pt-24 pb-45 overflow-hidden">
+    <section className="pt-16 lg:pt-24 pb-45 overflow-hidden">
       <div className="w-full">
 
         {/* heading */}

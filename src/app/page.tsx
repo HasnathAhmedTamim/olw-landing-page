@@ -17,6 +17,7 @@ export default function LandingPage() {
         <Pricing />
         <Tools />
         <Reviews />
+        <FAQ />
         {/* <Hero />
         <Pricing />
      
