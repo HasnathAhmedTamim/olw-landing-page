@@ -16,12 +16,12 @@ export default function LandingPage() {
         <Services />
         <Pricing />
         <Tools />
-
+        <Reviews />
         {/* <Hero />
         <Pricing />
      
         <Onboarding />
-        <Reviews />
+      
         <FAQ /> */}
 
       </div>
