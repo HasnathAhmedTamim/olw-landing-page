@@ -75,7 +75,7 @@ const Pricing = () => {
     <section className="mt-18">
       <div className="flex flex-col items-center justify-center">
         <h2
-          className="font-['DM_Sans',sans-serif] text-[40px] leading-[100%] tracking-[0%] text-center font-bold"
+          className="font-['DM_Sans',sans-serif] text-[30px] leading-[100%] tracking-[0%] text-center font-bold sm:text-[34px] lg:text-[40px]"
         >
           <span className="text-(--color-nav-text)">
             Airbnb Assistant
@@ -83,12 +83,12 @@ const Pricing = () => {
           <span className="text-(--color-accent)">Pricing</span>
         </h2>
         <p
-          className="mt-4 text-center text-[20px] leading-[100%] tracking-[0%] font-normal font-['DM_Sans',sans-serif] text-(--color-nav-text)"
+          className="mt-4 text-center text-[16px] leading-[100%] tracking-[0%] font-normal font-['DM_Sans',sans-serif] text-(--color-nav-text) sm:text-[18px] lg:text-[20px]"
         >
           Choose a plan that&apos;s right for you
         </p>
 
-        <div className="mt-8 flex items-center gap-6 relative">
+        <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           <p
             className="text-[16px] leading-[100%] tracking-[0%] font-normal text-(--color-pay-text) font-['DM_Sans',sans-serif]"
           >
@@ -120,7 +120,7 @@ const Pricing = () => {
             Pay Yearly
           </p>
 
-          <div className="absolute -right-45 -top-2.5 flex items-end">
+          <div className="absolute -right-45 -top-2.5 hidden items-end lg:flex">
             <Image
               src="/logos/arrow2.svg"
               width={92}
@@ -134,7 +134,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <ul className="mt-11.5 w-full px-32 grid grid-cols-3 gap-6">
+        <ul className="mt-11.5 grid w-full grid-cols-1 gap-6 px-6 sm:grid-cols-2 sm:px-10 lg:grid-cols-3 lg:px-32">
           {PRICING.map((plan) => {
             const annualPrice = Math.round(plan.price * 12 * 0.75);
             return (
@@ -161,7 +161,7 @@ const Pricing = () => {
                 <p className="mt-5 mb-6 flex items-center gap-3">
                   {isYearly ? (
                     <>
-                      <span className="font-['Manrope',sans-serif] font-semibold text-[56px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent)">
+                      <span className="font-['Manrope',sans-serif] font-semibold text-[42px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent) sm:text-[56px]">
                         {"$" + annualPrice}
                       </span>
                       <span className="font-['Manrope',sans-serif] font-light text-[16px] leading-[100%] text-(--color-subtext) group-hover:text-(--color-description-on-accent)">
@@ -170,7 +170,7 @@ const Pricing = () => {
                     </>
                   ) : (
                     <>
-                      <span className="font-['Manrope',sans-serif] font-semibold text-[56px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent)">
+                      <span className="font-['Manrope',sans-serif] font-semibold text-[42px] leading-[100%] text-(--color-pay-text) group-hover:text-(--color-on-accent) sm:text-[56px]">
                         {"$" + plan.price}
                       </span>
                       <span className="font-['Manrope',sans-serif] font-light text-[16px] leading-[100%] text-(--color-subtext) group-hover:text-(--color-description-on-accent)">

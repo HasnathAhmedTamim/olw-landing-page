@@ -59,15 +59,14 @@ export const Services: React.FC = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="mt-14 px-25 flex flex-col items-center"
+      className="mt-14 flex flex-col items-center px-6 lg:px-25"
     >
-      <h1 id="services-heading" className="text-[32px] font-bold">
-        <span style={{ color: "var(--color-heading-black)" }}>Our </span>
-        <span style={{ color: "var(--color-accent)" }}>Service</span>
+      <h1 id="services-heading" className="text-center text-[28px] font-bold sm:text-[32px]">
+        <span className="text-(--color-heading-black)">Our </span>
+        <span className="text-(--color-accent)">Service</span>
       </h1>
       <p
-        className="max-w-184.5 mt-3.5 px-5 font-medium text-[14px] leading-[120%] tracking-[0%] text-center"
-        style={{ color: "var(--color-heading-black)" }}
+        className="max-w-184.5 mt-3.5 px-2 font-medium text-[14px] leading-[120%] tracking-[0%] text-center text-(--color-heading-black) sm:px-5"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -75,23 +74,23 @@ export const Services: React.FC = () => {
         commodo consequat.{" "}
       </p>
 
-      <ul className="mt-13.5 w-full grid grid-cols-3 gap-6">
+      <ul className="mt-13.5 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s) => (
           <li
             key={s.id}
-            className="flex flex-col pt-11 pb-7.5 pl-8 pr-14.5 rounded-[12px] border border-[var(--color-service-border)] hover:bg-[var(--color-white-background)] hover:border-transparent hover:shadow-[0px_4px_90.3px_0px_var(--color-service-shadow)] transition-colors transition-shadow"
+            className="flex flex-col rounded-xl border border-(--color-service-border) p-6 transition hover:bg-(--color-white-background) hover:border-transparent hover:shadow-[0px_4px_90.3px_0px_var(--color-service-shadow)] sm:pt-9 sm:pb-7.5 sm:pl-8 sm:pr-8 lg:pt-11 lg:pr-14.5"
           >
             <Image
               src={s.image}
               alt={s.title}
               width={84}
               height={84}
-              className="object-contain w-[84px] h-[84px] max-w-[84px] max-h-[84px]"
+              className="object-contain w-21 h-21 max-w-21 max-h-21"
             />
-            <h3 className="mt-6 font-bold text-[24px] leading-[125%] tracking-[0px] align-middle text-[var(--color-nav-text)]">
+            <h3 className="mt-6 align-middle text-[20px] font-bold leading-[125%] tracking-[0px] text-(--color-nav-text) sm:text-[24px]">
               {s.title}
             </h3>
-            <p className="mt-3.5 mb-9 font-medium text-[14px] leading-[120%] tracking-[0px] text-[var(--color-heading-black)]">
+            <p className="mt-3.5 mb-9 font-medium text-[14px] leading-[120%] tracking-[0px] text-(--color-heading-black)">
               {s.description}
             </p>
             <Button

@@ -58,7 +58,7 @@ export default function Reviews() {
               <article
                 key={review.id}
                 className={`
-                flex h-50 w-full items-center gap-5 rounded-[11px] border p-6
+                flex w-full flex-col items-start gap-5 rounded-[11px] border p-5 sm:h-50 sm:flex-row sm:items-center sm:p-6
                 ${isOddCard ? "bg-[#F6F6F6] border-[#F6F6F6]" : "bg-white border-white shadow-[0_4px_77.4px_0px_#88888869]"}
                 `}
               >

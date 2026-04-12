@@ -19,7 +19,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 106,
 		height: 106,
 		className:
-			"left-[18%] top-[17%] hidden sm:block md:left-[19%] md:top-[18%]",
+			"left-[18%] top-[17%] hidden lg:block xl:left-[19%] xl:top-[18%]",
 	},
 	{
 		id: "booking",
@@ -28,7 +28,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 66,
 		height: 66,
 		className:
-			"right-[18%] top-[20%] hidden sm:block md:right-[19%] md:top-[21%]",
+			"right-[18%] top-[20%] hidden lg:block xl:right-[19%] xl:top-[21%]",
 	},
 	{
 		id: "vrbo",
@@ -37,7 +37,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 76,
 		height: 76,
 		className:
-			"left-[21%] bottom-[15%] hidden sm:block md:left-[22%] md:bottom-[16%]",
+			"left-[21%] bottom-[15%] hidden lg:block xl:left-[22%] xl:bottom-[16%]",
 	},
 	{
 		id: "tripadvisor",
@@ -46,7 +46,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 90,
 		height: 90,
 		className:
-			"right-[18%] bottom-[12%] hidden sm:block md:right-[19%] md:bottom-[13%]",
+			"right-[18%] bottom-[12%] hidden lg:block xl:right-[19%] xl:bottom-[13%]",
 	},
 ];
 
@@ -93,7 +93,7 @@ export const Banner = () => {
 				aria-labelledby="hero-assistants-title"
 			>
 				<div
-					className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-[size:120px_120px]"
+					className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-size-[120px_120px]"
 					aria-hidden="true"
 				/>
 
@@ -123,17 +123,17 @@ export const Banner = () => {
 					))}
 				</div>
 
-				<div className="mx-auto flex min-h-[584px] max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-12">
+				<div className="mx-auto flex min-h-125 max-w-7xl items-center px-6 py-20 sm:min-h-135 sm:px-8 sm:py-22 lg:min-h-146 lg:px-12 lg:py-24">
 					<div className="mx-auto max-w-4xl text-center">
 						<h1
 							id="hero-assistants-title"
 							className="text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-7xl"
 						>
-							<span className="block font-dm-sans font-bold text-[48px] leading-[130%] tracking-[0%] text-(--color-heading-black)">
+							<span className="block font-dm-sans font-bold text-[34px] leading-[130%] tracking-[0%] text-(--color-heading-black) sm:text-[42px] lg:text-[48px]">
 								Airbnb Assistants For
 							</span>
 
-							<span className="mt-2 block font-dm-sans font-medium text-[38.13px] leading-[130%] tracking-[0%] text-(--color-heading-black) text-center">
+							<span className="mt-2 block text-center font-dm-sans font-medium text-[26px] leading-[130%] tracking-[0%] text-(--color-heading-black) sm:text-[32px] lg:text-[38.13px]">
 								Property Management
 							</span>
 						</h1>
@@ -176,7 +176,7 @@ export const Banner = () => {
 				</div>
 			</section>
 
-			<p className="mb-9 mt-10 text-center font-dm-sans text-[20px] font-semibold leading-[100%] tracking-[0%] text-(--color-heading-black)">
+			<p className="mb-9 mt-10 px-4 text-center font-dm-sans text-[16px] font-semibold leading-[100%] tracking-[0%] text-(--color-heading-black) sm:text-[18px] lg:text-[20px]">
 				Trusted by leaders in 50+ industries
 			</p>
 		</>

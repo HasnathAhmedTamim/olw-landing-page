@@ -16,7 +16,7 @@ const NAV_ITEMS = [
   { label: "Resources", href: "/resources" },
 ];
 
-const TOP_ROW_PADDING = "px-4 py-5 md:px-8 lg:px-16 xl:px-25";
+const TOP_ROW_PADDING = "px-4 py-5 md:px-6 lg:px-16 xl:px-25";
 
 function getDesktopLinkClass(isActive: boolean) {
   const base =
@@ -75,7 +75,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden items-center gap-6 md:flex">
+          <ul className="hidden items-center gap-5 lg:flex xl:gap-6">
             {NAV_ITEMS.map((item) => {
               const active = hasActiveNavItem && isActive(item.href);
 
@@ -100,7 +100,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               aria-label="Schedule a meeting"
-              className="hidden md:inline-flex"
+              className="hidden lg:inline-flex"
             >
               <Button
                 type="base"
@@ -116,7 +116,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 lg:hidden"
                 aria-label="Close menu"
                 aria-expanded="true"
                 aria-controls="mobile-navigation"
@@ -127,7 +127,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 md:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/15 text-(--color-nav-text) transition-colors hover:bg-black/5 lg:hidden"
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="mobile-navigation"
@@ -141,7 +141,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {open && (
-          <div id="mobile-navigation" className="md:hidden border-t border-black/10">
+          <div id="mobile-navigation" className="border-t border-black/10 lg:hidden">
             <ul className="flex flex-col gap-4 px-4 py-4">
               {NAV_ITEMS.map((item) => {
                 const active = isActive(item.href);

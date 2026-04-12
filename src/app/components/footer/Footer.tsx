@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full border-t border-[#D6D6D6] bg-[#FFFFFF] pt-20">
       {/* Main Container - 100px gap from left/right on large screens */}
       <div className="mb-16 w-full px-6 lg:px-25">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
 
           {/* Brand & Description Section */}
           <div className="lg:col-span-4">
@@ -19,12 +19,12 @@ const Footer = () => {
                 className="h-auto"
               />
             </div>
-            <p className="font-['Plus_Jakarta_Sans'] text-[14px] font-normal leading-[22px] tracking-[0px] text-[#52525B]">
+            <p className="max-w-155 font-['Plus_Jakarta_Sans'] text-[14px] font-normal leading-5.5 tracking-[0px] text-[#52525B] lg:max-w-none">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum aliquet accumsan porta lectus ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentum.
             </p>
 
             {/* Social Icons */}
-            <div className="mt-8 flex flex-nowrap items-center gap-[34.34px]">
+            <div className="mt-8 flex flex-wrap items-center gap-6 md:gap-[34.34px]">
               <a href="#" aria-label="Twitter" title="Twitter" className="inline-flex h-5 w-5 shrink-0 items-center justify-center">
                 <Image src="/twitter.svg" alt="Twitter" width={20} height={20} className="block h-5 w-5 object-contain" />
               </a>
@@ -41,16 +41,16 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links Grid */}
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-start-6 lg:col-span-7 lg:gap-x-33 lg:pl-13.5">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-x-8 lg:col-start-6 lg:col-span-7 lg:grid-cols-3 lg:gap-x-33 lg:pl-13.5">
             {/* Company Section */}
             <div>
-              <h4 className="font-['DM_Sans'] font-bold text-[16px] leading-[24px] text-[#18181B] mb-6">
+              <h4 className="mb-6 font-['DM_Sans'] text-[16px] font-bold leading-6 text-[#18181B]">
                 Company
               </h4>
               <ul className="flex flex-col">
                 {['About', 'Features', 'Works', 'Career'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="font-['DM_Sans'] font-medium text-[14px] leading-[40px] text-[#18181B] hover:opacity-70 transition-opacity">
+                    <a href="#" className="font-['DM_Sans'] text-[14px] font-medium leading-10 text-[#18181B] transition-opacity hover:opacity-70">
                       {item}
                     </a>
                   </li>
@@ -60,13 +60,13 @@ const Footer = () => {
 
             {/* Help Section */}
             <div>
-              <h4 className="font-['DM_Sans'] font-bold text-[16px] leading-[24px] text-[#18181B] mb-6">
+              <h4 className="mb-6 font-['DM_Sans'] text-[16px] font-bold leading-6 text-[#18181B]">
                 Help
               </h4>
               <ul className="flex flex-col">
                 {['Customer Support', 'Delivery Details', 'Terms & Conditions', 'Privacy Policy'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="font-['DM_Sans'] font-medium text-[14px] leading-[40px] text-[#18181B] hover:opacity-70 transition-opacity">
+                    <a href="#" className="font-['DM_Sans'] text-[14px] font-medium leading-10 text-[#18181B] transition-opacity hover:opacity-70">
                       {item}
                     </a>
                   </li>
@@ -76,13 +76,13 @@ const Footer = () => {
 
             {/* Resources Section */}
             <div>
-              <h4 className="font-['DM_Sans'] font-bold text-[16px] leading-[24px] text-[#18181B] mb-6">
+              <h4 className="mb-6 font-['DM_Sans'] text-[16px] font-bold leading-6 text-[#18181B]">
                 Resources
               </h4>
               <ul className="flex flex-col">
                 {['Free eBooks', 'Development Tutorial', 'How to - Blog', 'Youtube Playlist'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="font-['DM_Sans'] font-medium text-[14px] leading-[40px] text-[#18181B] hover:opacity-70 transition-opacity">
+                    <a href="#" className="font-['DM_Sans'] text-[14px] font-medium leading-10 text-[#18181B] transition-opacity hover:opacity-70">
                       {item}
                     </a>
                   </li>
@@ -94,8 +94,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright Bar */}
-      <div className="w-full bg-[#230B41] py-[14px]">
-        <p className="font-['Poppins'] font-normal text-[14px] leading-[22px] tracking-[0px] text-center text-[#FFFFFF]">
+      <div className="w-full bg-[#230B41] py-3.5">
+        <p className="text-center font-['Poppins'] text-[14px] font-normal leading-5.5 tracking-[0px] text-[#FFFFFF]">
           © Copyright 2024, All Rights Reserved by XYz
         </p>
       </div>
