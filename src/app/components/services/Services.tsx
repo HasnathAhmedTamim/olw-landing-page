@@ -84,9 +84,9 @@ export const Services: React.FC = () => {
               border-[var(--color-service-border)]
               pt-13.25 pr-14.5 pb-7.5 pl-7.5
               transition-all duration-300
-              hover:bg-white
+              hover:bg-[#FFFFFF]
               hover:border-transparent
-              hover:shadow-lg
+              hover:shadow-[0_4px_90.3px_0_#D7CDCF78]
             "
           >
             <Image
