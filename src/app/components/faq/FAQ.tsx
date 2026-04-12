@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Button from "../common/button";
 
 const FAQ_DATA = [
   {
@@ -114,9 +115,14 @@ export default function FaqSection() {
           Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
         </p>
 
-        <button className="bg-[#ED3C6A] text-white px-6 py-3 rounded-lg font-['DM_Sans',sans-serif] font-medium text-[16px] leading-6 tracking-[0%] hover:bg-opacity-90 transition-all active:scale-95">
+        <Button
+          variant="base"
+          verticalPadding="py-3"
+          horizontalPadding="px-6"
+          className="rounded-lg font-['DM_Sans',sans-serif] text-[16px] leading-6 tracking-[0%] active:scale-95"
+        >
           Get in touch
-        </button>
+        </Button>
       </div>
     </section>
   );

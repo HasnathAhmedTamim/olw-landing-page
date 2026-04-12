@@ -130,15 +130,15 @@ const Pricing = () => {
           </span>
 
           {/* Save badge */}
-          <div className="absolute -right-32 -top-2 hidden lg:flex items-center gap-2">
+          <div className="absolute left-full top-1/2 ml-4 hidden -translate-y-1/2 whitespace-nowrap lg:flex items-end gap-1.5">
             <Image
-              src="/logos/arrow2.svg"
+              src="/save_arrow.svg"
               width={92}
               height={56}
               alt="Save arrow"
-              className="h-auto w-auto"
+              className="h-14 w-23 object-contain"
             />
-            <span className="text-[16px] font-medium underline text-(--color-accent)">
+            <span className="pb-1 font-['DM_Sans',sans-serif] text-[18px] font-medium leading-[100%] tracking-[0%] text-(--color-accent)">
               Save 25%
             </span>
           </div>

@@ -19,7 +19,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 106,
 		height: 106,
 		className:
-			"left-[18%] top-[17%] hidden lg:block xl:left-[19%] xl:top-[18%]",
+			"left-0 top-2 sm:left-[10%] sm:top-[14%] lg:left-[18%] lg:top-[17%] xl:left-[19%] xl:top-[18%]",
 	},
 	{
 		id: "booking",
@@ -28,7 +28,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 66,
 		height: 66,
 		className:
-			"right-[18%] top-[20%] hidden lg:block xl:right-[19%] xl:top-[21%]",
+			"right-0 top-4 sm:right-[10%] sm:top-[16%] lg:right-[18%] lg:top-[20%] xl:right-[19%] xl:top-[21%]",
 	},
 	{
 		id: "vrbo",
@@ -37,7 +37,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 76,
 		height: 76,
 		className:
-			"left-[21%] bottom-[15%] hidden lg:block xl:left-[22%] xl:bottom-[16%]",
+			"left-1 bottom-6 sm:left-[12%] sm:bottom-[12%] lg:left-[21%] lg:bottom-[15%] xl:left-[22%] xl:bottom-[16%]",
 	},
 	{
 		id: "tripadvisor",
@@ -46,7 +46,7 @@ const floatingLogos: FloatingLogo[] = [
 		width: 90,
 		height: 90,
 		className:
-			"right-[18%] bottom-[12%] hidden lg:block xl:right-[19%] xl:bottom-[13%]",
+			"right-0 bottom-4 sm:right-[10%] sm:bottom-[10%] lg:right-[18%] lg:bottom-[12%] xl:right-[19%] xl:bottom-[13%]",
 	},
 ];
 
@@ -69,7 +69,10 @@ function FloatingLogoCard({
 }: Omit<FloatingLogo, "id">) {
 	return (
 		<div
-			className={["absolute z-10 rounded-3xl p-3", className].join(" ")}
+			className={[
+				"absolute z-10 rounded-3xl p-1 opacity-90 scale-50 sm:p-2 sm:scale-90 lg:p-3 lg:scale-100",
+				className,
+			].join(" ")}
 			aria-hidden="true"
 		>
 			<div className="overflow-hidden rounded-2xl">
@@ -89,7 +92,7 @@ export const Banner = () => {
 	return (
 		<>
 			<section
-				className="relative isolate overflow-hidden bg-[#f8f8f7]"
+				className="shadow-banner-top relative isolate overflow-hidden border border-[#00000014] bg-white"
 				aria-labelledby="hero-assistants-title"
 			>
 				{/* grid bg */}
@@ -122,33 +125,34 @@ export const Banner = () => {
 				</div>
 
 				{/* content */}
-				<div className="mx-auto flex min-h-[600px] max-w-7xl items-center px-6 py-20 sm:px-8 lg:px-12">
-					<div className="mx-auto max-w-4xl text-center">
+				<div className="relative z-20 mx-auto flex min-h-130 max-w-7xl items-center px-4 py-14 sm:min-h-150 sm:px-8 sm:py-20 lg:px-12">
+					<div className="mx-auto w-full max-w-88 text-center sm:max-w-4xl">
 						<h1
 							id="hero-assistants-title"
-							className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-7xl"
+							className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-7xl"
 						>
-							<span className="block font-bold text-[34px] leading-[130%] text-[var(--color-heading-black)] sm:text-[42px] lg:text-[48px]">
+							<span className="block font-bold text-[30px] leading-[130%] text-(--color-heading-black) sm:text-[42px] lg:text-[48px]">
 								Airbnb Assistants For
 							</span>
 
-							<span className="mt-2 block text-[26px] font-medium leading-[130%] text-[var(--color-heading-black)] sm:text-[32px] lg:text-[38px]">
+							<span className="mt-2 block text-[22px] font-medium leading-[130%] text-(--color-heading-black) sm:text-[32px] lg:text-[38px]">
 								Property Management
 							</span>
 						</h1>
 
-						<p className="mx-auto mt-8 max-w-3xl text-[14px] font-medium leading-[150%] text-[var(--color-heading-black)]">
+						<p className="mx-auto mt-6 max-w-3xl px-2 text-[14px] font-medium leading-[150%] text-(--color-heading-black) sm:mt-8">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</p>
 
-						<div className="mt-10 flex flex-col items-center gap-5">
+						<div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:gap-5">
 							<Button
 								variant="base"
 								verticalPadding="py-[13.5px]"
 								horizontalPadding="px-[22px]"
+								className="w-full max-w-57.5 justify-center sm:w-auto sm:max-w-none"
 							>
-								<span className="font-bold text-[14px]">
+								<span className="font-bold text-[13px] sm:text-[14px]">
 									Schedule A Meeting
 								</span>
 								<Image
@@ -171,7 +175,7 @@ export const Banner = () => {
 				</div>
 			</section>
 
-			<p className="mb-9 mt-10 px-4 text-center text-[16px] font-semibold text-[var(--color-heading-black)] sm:text-[18px] lg:text-[20px]">
+			<p className="mb-9 mt-10 px-4 text-center text-[16px] font-semibold text-(--color-heading-black) sm:text-[18px] lg:text-[20px]">
 				Trusted by leaders in 50+ industries
 			</p>
 		</>
