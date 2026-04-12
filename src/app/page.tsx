@@ -3,6 +3,7 @@ import FAQ from "./components/faq/FAQ";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Onboarding from "./components/onboarding/Onboarding";
+import Partners from "./components/partners/partners";
 import Pricing from "./components/pricing/Pricing";
 
 import Reviews from "./components/reviews/Reviews";
@@ -14,6 +15,7 @@ export default function LandingPage() {
     <section className="">
       <div className="">
         <Banner />
+        <Partners></Partners>
         <Services />
         <Pricing />
         <Tools />
