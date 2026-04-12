@@ -1,14 +1,14 @@
-/* partners base */
+/* Partners Section */
 .partners {
   width: 100%;
   box-sizing: border-box;
   background-color: var(--color-partners-bg);
 }
 
-/* partners list (horizontal, scrollable on small screens) */
+/* Horizontal scroll list (mobile/tablet) */
 .partners-list {
   display: flex;
-  gap: 65px;
+  gap: 64px;
   align-items: center;
   justify-content: flex-start;
   list-style: none;
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 42px; /* matches the tallest SVG height */
+  height: 42px;
 }
 
 .partner-item img {

@@ -92,20 +92,20 @@ export const Banner = () => {
 				className="relative isolate overflow-hidden bg-[#f8f8f7]"
 				aria-labelledby="hero-assistants-title"
 			>
+				{/* grid bg */}
 				<div
 					className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] bg-size-[120px_120px]"
 					aria-hidden="true"
 				/>
 
+				{/* radial fade */}
 				<div
 					className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_45%,rgba(255,255,255,0.55)_100%)]"
 					aria-hidden="true"
 				/>
 
-				<div
-					className="pointer-events-none absolute inset-0"
-					aria-hidden="true"
-				>
+				{/* dots */}
+				<div className="pointer-events-none absolute inset-0" aria-hidden="true">
 					{dots.map((dotClass, index) => (
 						<span
 							key={index}
@@ -114,60 +114,55 @@ export const Banner = () => {
 					))}
 				</div>
 
-				<div
-					className="pointer-events-none absolute inset-0"
-					aria-hidden="true"
-				>
+				{/* floating logos */}
+				<div className="pointer-events-none absolute inset-0" aria-hidden="true">
 					{floatingLogos.map((logo) => (
 						<FloatingLogoCard key={logo.id} {...logo} />
 					))}
 				</div>
 
-				<div className="mx-auto flex min-h-125 max-w-7xl items-center px-6 py-20 sm:min-h-135 sm:px-8 sm:py-22 lg:min-h-146 lg:px-12 lg:py-24">
+				{/* content */}
+				<div className="mx-auto flex min-h-[600px] max-w-7xl items-center px-6 py-20 sm:px-8 lg:px-12">
 					<div className="mx-auto max-w-4xl text-center">
 						<h1
 							id="hero-assistants-title"
-							className="text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-7xl"
+							className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-7xl"
 						>
-							<span className="block font-dm-sans font-bold text-[34px] leading-[130%] tracking-[0%] text-(--color-heading-black) sm:text-[42px] lg:text-[48px]">
+							<span className="block font-bold text-[34px] leading-[130%] text-[var(--color-heading-black)] sm:text-[42px] lg:text-[48px]">
 								Airbnb Assistants For
 							</span>
 
-							<span className="mt-2 block text-center font-dm-sans font-medium text-[26px] leading-[130%] tracking-[0%] text-(--color-heading-black) sm:text-[32px] lg:text-[38.13px]">
+							<span className="mt-2 block text-[26px] font-medium leading-[130%] text-[var(--color-heading-black)] sm:text-[32px] lg:text-[38px]">
 								Property Management
 							</span>
 						</h1>
 
-						<p className="mx-auto mt-8 max-w-3xl font-dm-sans font-medium text-[14px] leading-[100%] tracking-[0%] text-(--color-heading-black) text-center">
+						<p className="mx-auto mt-8 max-w-3xl text-[14px] font-medium leading-[150%] text-[var(--color-heading-black)]">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</p>
 
-						<div className="mt-10 flex flex-col items-center justify-center gap-5">
+						<div className="mt-10 flex flex-col items-center gap-5">
 							<Button
-								type="base"
+								variant="base"
 								verticalPadding="py-[13.5px]"
 								horizontalPadding="px-[22px]"
-								child={
-									<>
-										<span className="font-bold text-[14px]">
-											Schedule A Meeting
-										</span>
-										<Image
-											src="/arrow_right.svg"
-											alt="arrow"
-											width={10}
-											height={9}
-											className="ml-2"
-										/>
-									</>
-								}
-							/>
+							>
+								<span className="font-bold text-[14px]">
+									Schedule A Meeting
+								</span>
+								<Image
+									src="/arrow_right.svg"
+									alt="arrow"
+									width={10}
+									height={9}
+									className="ml-2"
+								/>
+							</Button>
+
 							<Link
 								href="/pricing"
-								className="text-lg font-medium text-slate-900 underline underline-offset-4 transition-opacity hover:opacity-70 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20 focus-visible:ring-offset-2"
+								className="text-lg font-medium underline underline-offset-4 transition-opacity hover:opacity-70"
 							>
 								See Pricing
 							</Link>
@@ -176,7 +171,7 @@ export const Banner = () => {
 				</div>
 			</section>
 
-			<p className="mb-9 mt-10 px-4 text-center font-dm-sans text-[16px] font-semibold leading-[100%] tracking-[0%] text-(--color-heading-black) sm:text-[18px] lg:text-[20px]">
+			<p className="mb-9 mt-10 px-4 text-center text-[16px] font-semibold text-[var(--color-heading-black)] sm:text-[18px] lg:text-[20px]">
 				Trusted by leaders in 50+ industries
 			</p>
 		</>
