@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="w-full border-t border-[#D6D6D6] bg-[#FFFFFF] pt-20">
       {/* Main Container - 100px gap from left/right on large screens */}
-      <div className="w-full px-6 lg:px-[100px] mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="mb-16 w-full px-6 lg:px-25">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
 
           {/* Brand & Description Section */}
           <div className="lg:col-span-4">
@@ -14,34 +14,34 @@ const Footer = () => {
               <Image
                 src="/logos/google_logo.svg"
                 alt="Google Logo"
-                width={125}
-                height={45}
+                width={160}
+                height={40}
                 className="h-auto"
               />
             </div>
-            <p className="font-['Plus_Jakarta_Sans'] font-normal text-[14px] leading-[22px] text-[#52525B] max-w-[320px]">
+            <p className="font-['Plus_Jakarta_Sans'] text-[14px] font-normal leading-[22px] tracking-[0px] text-[#52525B]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum aliquet accumsan porta lectus ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentum.
             </p>
 
             {/* Social Icons */}
-            <div className="mt-8 flex items-center gap-4">
-              <a href="#" aria-label="Twitter" title="Twitter" className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-50">
-                <Image src="/twitter.svg" alt="Twitter" width={20} height={20} className="h-5 w-5 object-contain" />
+            <div className="mt-8 flex flex-nowrap items-center gap-[34.34px]">
+              <a href="#" aria-label="Twitter" title="Twitter" className="inline-flex h-5 w-5 shrink-0 items-center justify-center">
+                <Image src="/twitter.svg" alt="Twitter" width={20} height={20} className="block h-5 w-5 object-contain" />
               </a>
-              <a href="#" aria-label="Facebook" title="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-50">
-                <Image src="/fb.svg" alt="Facebook" width={20} height={20} className="h-5 w-5 object-contain" />
+              <a href="#" aria-label="Facebook" title="Facebook" className="inline-flex h-5 w-5 shrink-0 items-center justify-center">
+                <Image src="/fb.svg" alt="Facebook" width={20} height={20} className="block h-5 w-5 object-contain" />
               </a>
-              <a href="#" aria-label="Instagram" title="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-50">
-                <Image src="/ig.svg" alt="Instagram" width={20} height={20} className="h-5 w-5 object-contain" />
+              <a href="#" aria-label="Instagram" title="Instagram" className="inline-flex h-5 w-5 shrink-0 items-center justify-center">
+                <Image src="/ig.svg" alt="Instagram" width={20} height={20} className="block h-5 w-5 object-contain" />
               </a>
-              <a href="#" aria-label="GitHub" title="GitHub" className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-gray-50">
-                <Image src="/gh.svg" alt="GitHub" width={20} height={20} className="h-5 w-5 object-contain" />
+              <a href="#" aria-label="GitHub" title="GitHub" className="inline-flex h-5 w-5 shrink-0 items-center justify-center">
+                <Image src="/gh.svg" alt="GitHub" width={20} height={20} className="block h-5 w-5 object-contain" />
               </a>
             </div>
           </div>
 
           {/* Navigation Links Grid */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-start-6 lg:col-span-7 lg:gap-x-33 lg:pl-13.5">
             {/* Company Section */}
             <div>
               <h4 className="font-['DM_Sans'] font-bold text-[16px] leading-[24px] text-[#18181B] mb-6">
