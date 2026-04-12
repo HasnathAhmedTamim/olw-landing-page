@@ -2,8 +2,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
-import "./globals.css";
 import Footer from "./components/footer/Footer";
+import "./globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -11,7 +11,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "OLW Landing Page",
-  description: "Optimized Airbnb Assistant Landing Page - Built with Next.js & Tailwind CSS",
+  description:
+    "Optimized Airbnb Assistant Landing Page - Built with Next.js & Tailwind CSS",
 };
 
 export default function RootLayout({
@@ -21,11 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${dmSans.className} min-h-full flex flex-col`}>
+      <body className={`${dmSans.className} min-h-screen flex flex-col`}>
         <Navbar />
-        <div className="w-full">
-          <main className="w-full">{children}</main>
-        </div>
+
+        <main className="flex-1 w-full">
+          {children}
+        </main>
 
         <Footer />
       </body>
