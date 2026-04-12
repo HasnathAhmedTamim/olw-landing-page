@@ -1,3 +1,4 @@
+import Banner from "./components/banner/banner";
 import FAQ from "./components/faq/FAQ";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
@@ -12,7 +13,7 @@ export default function LandingPage() {
   return (
     <section className="">
       <div className="">
-
+        <Banner />
         <Services />
         <Pricing />
         <Tools />

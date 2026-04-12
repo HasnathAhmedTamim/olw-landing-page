@@ -37,3 +37,8 @@
   /* tools tile shadow (used on hover) */
   --color-tools-shadow: #ff8aa847;
 }
+
+/* Helper to ensure DM Sans is applied where needed */
+.font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+}
