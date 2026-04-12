@@ -1,9 +1,7 @@
 import Banner from "./components/banner/banner";
 import FAQ from "./components/faq/FAQ";
+import FewReason from "./components/fewReason/fewReason";
 import { GetStarted } from "./components/getStarted/getStarted";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
-import Onboarding from "./components/onboarding/Onboarding";
 import Partners from "./components/partners/partners";
 import Pricing from "./components/pricing/Pricing";
 
@@ -21,6 +19,7 @@ export default function LandingPage() {
         <Pricing />
         <Tools />
         <GetStarted /> 
+        <FewReason />
         <Reviews />
         <FAQ />
       
