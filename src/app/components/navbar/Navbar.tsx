@@ -45,7 +45,7 @@ export default function Navbar() {
         alt="arrow"
         width={10}
         height={9}
-        className="ml-2"
+        className="ml-2 h-auto w-auto"
       />
     </>
   );

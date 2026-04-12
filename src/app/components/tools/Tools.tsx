@@ -89,6 +89,7 @@ export const Tools = () => {
                 width={tool.width}
                 height={tool.height}
                 alt={`Tool ${tool.id}`}
+                className="h-auto w-auto object-contain"
               />
             </li>
           ))}

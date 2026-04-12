@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Google Logo"
                 width={160}
                 height={40}
-                className="h-auto"
+                className="h-auto w-auto"
               />
             </div>
             <p className="max-w-155 font-['Plus_Jakarta_Sans'] text-[14px] font-normal leading-5.5 tracking-[0px] text-[#52525B] lg:max-w-none">

@@ -136,6 +136,7 @@ const Pricing = () => {
               width={92}
               height={56}
               alt="Save arrow"
+              className="h-auto w-auto"
             />
             <span className="text-[16px] font-medium underline text-(--color-accent)">
               Save 25%
@@ -206,6 +207,7 @@ const Pricing = () => {
                           width={16}
                           height={16}
                           alt="icon"
+                          className="h-auto w-auto"
                         />
                       </div>
 
