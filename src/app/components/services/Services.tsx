@@ -70,10 +70,8 @@ export const Services: React.FC = () => {
       </h2>
 
       {/* Description */}
-      <p className="mt-4 max-w-3xl px-2 text-center text-[14px] font-medium leading-[150%] text-[var(--color-heading-black)] sm:px-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris.
+      <p className="mt-4 max-w-3xl px-2 text-center font-['DM_Sans',sans-serif] text-[14px] font-medium leading-[100%] tracking-[0%] text-(--color-heading-black) sm:px-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
 
       {/* Grid */}
@@ -84,7 +82,7 @@ export const Services: React.FC = () => {
             className="
               flex flex-col rounded-xl border 
               border-[var(--color-service-border)]
-              p-6
+              pt-13.25 pr-14.5 pb-7.5 pl-7.5
               transition-all duration-300
               hover:bg-white
               hover:border-transparent
@@ -99,11 +97,11 @@ export const Services: React.FC = () => {
               className="h-21 w-21 object-contain"
             />
 
-            <h3 className="mt-6 text-[20px] font-bold leading-[125%] text-[var(--color-nav-text)] sm:text-[24px]">
+            <h3 className="mt-6 font-['DM_Sans',sans-serif] text-[24px] font-bold leading-[125%] tracking-[0px] align-middle text-(--color-nav-text)">
               {s.title}
             </h3>
 
-            <p className="mt-3.5 mb-8 text-[14px] font-medium leading-[150%] text-[var(--color-description-text)]">
+            <p className="mt-3.5 mb-8 font-['DM_Sans',sans-serif] text-[14px] font-medium leading-[100%] tracking-[0%] text-(--color-heading-black)">
               {s.description}
             </p>
 
