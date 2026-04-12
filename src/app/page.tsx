@@ -1,5 +1,6 @@
 import Banner from "./components/banner/banner";
 import FAQ from "./components/faq/FAQ";
+import { GetStarted } from "./components/getStarted/getStarted";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Onboarding from "./components/onboarding/Onboarding";
@@ -19,14 +20,10 @@ export default function LandingPage() {
         <Services />
         <Pricing />
         <Tools />
+        <GetStarted /> 
         <Reviews />
         <FAQ />
-        {/* <Hero />
-        <Pricing />
-     
-        <Onboarding />
       
-        <FAQ /> */}
 
       </div>
     </section>

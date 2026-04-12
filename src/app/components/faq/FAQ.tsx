@@ -38,7 +38,7 @@ export default function FaqSection() {
     <section className="w-full px-[clamp(16px,7vw,100px)] pb-19.25 pt-16 bg-white">
 
       {/* 1. FAQ Container Div */}
-      <div className="bg-[#F6F6F6] rounded-2xl">
+      <div className="bg-[#F9FAFB] rounded-2xl">
         <div className="text-center px-8 pt-8 pb-12 md:px-12 md:pt-12 md:pb-12 lg:px-59 lg:pt-18.5 lg:pb-18.75">
           <h2 className="font-['DM_Sans',sans-serif] font-semibold text-[36px] leading-11 tracking-[-0.02em] text-center text-black">
             Frequently asked <span className="text-[#ED3C6A]">questions</span>
@@ -95,17 +95,17 @@ export default function FaqSection() {
       <div className="h-4.75" />
 
       {/* 2. Still have questions Container */}
-      <div className="bg-[#F6F6F6] rounded-3xl p-8 text-center flex flex-col items-center">
+      <div className="bg-[#F9FAFB] rounded-3xl p-8 text-center flex flex-col items-center">
         {/* Overlapping Avatar Group */}
         <div className="flex -space-x-2 mb-6">
           <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative">
-            <Image src="/avatars/user1.jpg" alt="Team" fill className="object-cover" />
+            <Image src="/user1.svg" alt="Team" fill className="object-cover" />
           </div>
           <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative z-10">
-            <Image src="/avatars/user2.jpg" alt="Team" fill className="object-cover" />
+            <Image src="/user2.svg" alt="Team" fill className="object-cover" />
           </div>
           <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative">
-            <Image src="/avatars/user3.jpg" alt="Team" fill className="object-cover" />
+            <Image src="/user3.svg" alt="Team" fill className="object-cover" />
           </div>
         </div>
 
