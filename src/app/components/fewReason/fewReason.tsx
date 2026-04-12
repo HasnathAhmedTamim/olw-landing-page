@@ -21,7 +21,7 @@ export default function FewReason() {
                                 Choose us?
                             </h2>
 
-                            <p className="mt-3.5 font-dm-sans text-[14px] font-medium leading-[100%] tracking-[0%] text-(--color-heading-black)">
+                            <p className="mt-3.5 font-dm-sans text-[14px] font-semibold leading-[100%] tracking-[0%] text-(--color-heading-black)">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                                 enim ad minim veniam, quis nostrud exercitation
@@ -39,7 +39,7 @@ export default function FewReason() {
                                                 aria-hidden="true"
                                             />
                                         </span>
-                                        <span className="font-dm-sans text-[20px] font-semibold leading-[100%] tracking-[0%] text-(--color-heading-black)">
+                                        <span className="font-dm-sans text-[16px] font-bold leading-[100%] tracking-[0%] text-[#1E1E1E]">
                                             {reason}
                                         </span>
                                     </li>
