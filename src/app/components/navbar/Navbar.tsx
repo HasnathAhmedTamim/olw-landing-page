@@ -33,6 +33,21 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const scheduleMeetingContent = (
+    <>
+      <span className="font-bold text-[14px]">
+        Schedule A Meeting
+      </span>
+      <Image
+        src="/arrow_right.svg"
+        alt="arrow"
+        width={10}
+        height={9}
+        className="ml-2"
+      />
+    </>
+  );
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
@@ -92,16 +107,8 @@ export default function Navbar() {
                 element="span"
                 verticalPadding="py-[13.5px]"
                 horizontalPadding="px-[22px]"
-                className="gap-2 text-sm font-bold transition-opacity hover:opacity-90"
-              >
-                <span>Schedule A Meeting</span>
-                <Image
-                  src="/logos/Arrow.svg"
-                  alt="Arrow icon"
-                  width={10}
-                  height={9}
-                />
-              </Button>
+                child={scheduleMeetingContent}
+              />
             </Link>
 
             {/* Hamburger */}
@@ -159,6 +166,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="/contact"
+                  aria-label="Schedule a meeting"
                   onClick={() => setOpen(false)}
                 >
                   <Button
@@ -166,16 +174,9 @@ export default function Navbar() {
                     element="span"
                     verticalPadding="py-[13.5px]"
                     horizontalPadding="px-[22px]"
-                    className="mt-2 w-fit gap-2 text-sm font-bold"
-                  >
-                    Schedule A Meeting
-                    <Image
-                      src="/logos/Arrow.png"
-                      alt="Arrow icon"
-                      width={10}
-                      height={9}
-                    />
-                  </Button>
+                    className="mt-2"
+                    child={scheduleMeetingContent}
+                  />
                 </Link>
               </li>
             </ul>

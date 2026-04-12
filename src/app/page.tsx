@@ -18,11 +18,12 @@ export default function LandingPage() {
         <Services />
         <Pricing />
         <Tools />
-        <GetStarted /> 
+        <GetStarted />
         <FewReason />
         <Reviews />
         <FAQ />
-      
+
+
 
       </div>
     </section>

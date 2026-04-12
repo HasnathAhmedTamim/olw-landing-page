@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
+import Footer from "./components/footer/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -25,8 +26,8 @@ export default function RootLayout({
         <div className="w-full">
           <main className="w-full">{children}</main>
         </div>
-    
-        {/* <Footer /> */}
+
+        <Footer />
       </body>
     </html>
   );
