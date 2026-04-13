@@ -141,8 +141,7 @@ export const Banner = () => {
 						</h1>
 
 						<p className="mx-auto mt-6 max-w-3xl px-2 text-[14px] font-medium leading-[150%] text-(--color-heading-black) sm:mt-8">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 						</p>
 
 						<div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:gap-5">

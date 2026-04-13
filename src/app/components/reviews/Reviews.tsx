@@ -45,7 +45,7 @@ export default function Reviews() {
           </h2>
 
           <p className="max-w-184.5 mt-3.5 px-5 font-['DM_Sans',sans-serif] font-medium text-[14px] leading-[100%] tracking-[0%] text-center text-(--color-heading-black)">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
 
